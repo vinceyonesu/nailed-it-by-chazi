@@ -151,18 +151,15 @@ export default function Home() {
             </p>
 
             {/*
-              REPLACE THIS DIV with your Facebook Page Plugin embed code.
-              Example:
-              <div
-                className="fb-page"
-                data-href="https://www.facebook.com/YOUR_PAGE"
-                data-tabs="timeline"
-                data-width="380"
-                data-height="400"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="false"
+              <iframe
+  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61563443194436&tabs=timeline&width=380&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+  width="380"
+  height="500"
+  style={{ border: 'none', overflow: 'hidden' }}
+  scrolling="no"
+  frameBorder="0"
+  allowFullScreen
+  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
             */}
             <div className="bg-gradient-to-br from-petal to-nude-50 rounded-2xl p-8 border-2 border-dashed border-nude-200 mx-auto max-w-sm">
