@@ -151,16 +151,7 @@ export default function Home() {
             </p>
 
             {/*
-              <iframe
-  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61563443194436&tabs=timeline&width=380&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-  width="380"
-  height="500"
-  style={{ border: 'none', overflow: 'hidden' }}
-  scrolling="no"
-  frameBorder="0"
-  allowFullScreen
-  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              />
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61563443194436&tabs=timeline&width=380&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="380" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             */}
             <div className="bg-gradient-to-br from-petal to-nude-50 rounded-2xl p-8 border-2 border-dashed border-nude-200 mx-auto max-w-sm">
               <div className="text-nude-400 text-xs mb-3 font-semibold uppercase tracking-wider">
