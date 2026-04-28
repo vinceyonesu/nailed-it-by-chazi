@@ -3,25 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf8f5;
+  --foreground: #2d1b1b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .font-display {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+
+  .bg-rose-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-rosegold text-white font-body font-semibold px-6 py-3 rounded-full
+           transition-all duration-200 active:scale-95 hover:bg-rosegold-dark
+           shadow-soft hover:shadow-glow focus:outline-none focus:ring-2
+           focus:ring-rosegold/50 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-rosegold font-body font-semibold px-6 py-3 rounded-full
+           border-2 border-rosegold transition-all duration-200 active:scale-95
+           hover:bg-petal focus:outline-none focus:ring-2 focus:ring-rosegold/50 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-5 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-nude-200 bg-white
+           text-nude-900 font-body focus:outline-none focus:border-rosegold
+           focus:ring-2 focus:ring-rosegold/20 transition-all duration-200
+           placeholder:text-nude-400 text-base;
+  }
+
+  .step-indicator {
+    @apply flex items-center justify-center w-8 h-8 rounded-full text-sm font-semibold transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5c4a8;
+  border-radius: 2px;
+}
+
+/* Calendar custom styles */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Smooth page transitions */
+.page-enter {
+  animation: fadeUp 0.4s ease-out;
 }
